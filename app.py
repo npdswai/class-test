@@ -23,10 +23,6 @@ bucket = storage.bucket()
 db = firestore.client()
 
 
-
-bucket = storage.bucket()
-db = firestore.client()
-
 # 예시 사용자 세션 (실제 구현에서는 로그인 후 세션에 user_id 저장)
 user_id = "demo-user"
 
