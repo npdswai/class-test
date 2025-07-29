@@ -10,7 +10,7 @@ import uuid
 if not firebase_admin._apps:
     cred = credentials.Certificate("firebase_service_account.json")
     firebase_admin.initialize_app(cred, {
-        'storageBucket': 'class-test-1a3b3.firebasestorage.app'
+        'storageBucket': 'class-test-1a3b3.firebasestorage.com'
     })
 
 bucket = storage.bucket()
