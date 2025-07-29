@@ -6,10 +6,17 @@ from firebase_admin import credentials, auth, storage, firestore
 import tempfile
 import uuid
 
+import os
+import json
+
+
+# 환경 변수에서 서비스 계정 정보 로드 (Streamlit Cloud Secrets 사용)
+firebase_service_account = json.loads(os.environ["FIREBASE_SERVICE_ACCOUNT"])
+cred = credentials.Certificate(firebase_service_account)
 
 # Firebase 초기화
 if not firebase_admin._apps:
-    cred = credentials.Certificate("firebase_service_account.json")
+#    cred = credentials.Certificate("firebase_service_account.json")
     firebase_admin.initialize_app(cred, {
         'storageBucket': 'class-test-1a3b3.firebasestorage.com'
     })
