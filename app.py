@@ -6,6 +6,7 @@ from firebase_admin import credentials, auth, storage, firestore
 import tempfile
 import uuid
 
+
 # Firebase 초기화
 if not firebase_admin._apps:
     cred = credentials.Certificate("firebase_service_account.json")
