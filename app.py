@@ -10,9 +10,7 @@ import os
 import json
 
 
-# Streamlit secrets에서 JSON 로드
-firebase_service_account = json.loads(st.secrets["FIREBASE_SERVICE_ACCOUNT"])
-cred = credentials.Certificate(firebase_service_account)
+cred = credentials.Certificate(st.secrets["FIREBASE_SERVICE_ACCOUNT"])
 
 # Firebase 초기화
 if not firebase_admin._apps:
