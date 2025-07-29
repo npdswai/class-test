@@ -10,14 +10,17 @@ import os
 import json
 
 
+# dict 형태로 불러오므로 json.loads 필요 없음
 cred = credentials.Certificate(st.secrets["FIREBASE_SERVICE_ACCOUNT"])
 
-# Firebase 초기화
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred, {
-        'storageBucket': 'class-test-1a3b3.firebasestorage.com'
+        'storageBucket': 'class-test-1a3b3.appspot.com'  # ← 본인의 Firebase 프로젝트 버킷 ID
     })
 
+# Firebase 서비스들 연결
+bucket = storage.bucket()
+db = firestore.client()
 
 
 
