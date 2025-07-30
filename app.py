@@ -13,7 +13,7 @@ import uuid
 # --- 1. 초기 설정 및 Firebase/Gspread 연동 ---
 
 # Streamlit 페이지 설정
-st.set_page_config(page_title="교사용 수업 관리 시스템!!!", layout="wide")
+st.set_page_config(page_title="교사용 수업 관리 시스템", layout="wide")
 
 # Firebase 서비스 계정 키 및 Gspread 키 로드 (st.secrets 사용)
 try:
@@ -767,7 +767,7 @@ def data_backup():
 # --- 4. 메인 애플리케이션 로직 ---
 
 def main():
-    st.title("👨‍🏫 교사용 수업 관리 시스템")
+    st.title("👨‍🏫 교사용 수업 관리 시스템!!!")
 
     with st.sidebar:
         st.image(
