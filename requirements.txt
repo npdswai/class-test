@@ -1,3 +1,6 @@
 streamlit
 firebase-admin
 pandas
+gspread
+gspread-dataframe
+google-auth
